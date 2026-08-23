@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Televisions | Appliance Energy Consumption Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Appliance Energy Consumption Website - Home">
+        <img class="brand-icon" src="assets/img/PowerIcon.png" alt="Appliance Energy logo" />
+        <span>Appliance Energy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="televisions.html" aria-current="page">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container">
+      <h2>Television Energy Consumption</h2>
+      <p class="lead">
+        Placeholder content: televisions are left running for hours a day in
+        most Australian households, and screen size and panel technology
+        (LED, OLED, QLED) significantly affect wattage draw.
+      </p>
+
+      <h2>Appliance Energy Calculator</h2>
+      <p class="lead">
+        Pick a preset television or enter a custom wattage, then estimate its
+        running cost.
+      </p>
+
+      <div class="calculator">
+        <form id="calc-form" class="calc-form" novalidate>
+          <div class="field">
+            <label for="appliance-select">Appliance</label>
+            <select id="appliance-select">
+              <option value="custom">Custom (enter wattage manually)</option>
+              <option value="32-led-tv">32" LED TV (~50W)</option>
+              <option value="55-led-tv">55" LED TV (~90W)</option>
+              <option value="65-oled-tv">65" OLED TV (~150W)</option>
+              <option value="75-qled-tv">75" QLED TV (~210W)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="watt-input">Power usage (watts)</label>
+            <input type="number" id="watt-input" min="1" step="1" placeholder="e.g. 90" />
+            <div class="field-error" id="watt-error"></div>
+          </div>
+
+          <div class="field">
+            <label for="hours-input">Average hours of use per day</label>
+            <input type="number" id="hours-input" min="0" max="24" step="0.5" placeholder="e.g. 5" />
+            <div class="field-error" id="hours-error"></div>
+          </div>
+
+          <div class="field">
+            <label for="price-input">Electricity price (cents per kWh)</label>
+            <input type="number" id="price-input" min="1" step="0.1" placeholder="e.g. 30" />
+            <div class="field-error" id="price-error"></div>
+          </div>
+
+          <button type="submit" class="calc-btn">Calculate</button>
+        </form>
+
+        <div class="calc-results" id="calc-results">
+          <p class="calc-empty-state">Enter your appliance details and click Calculate to see results here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Your Name Here</span>
+      <span class="genai-note">Built with the assistance of Generative AI (Claude) for planning, code drafting and review.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

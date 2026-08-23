@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Appliance Energy Consumption Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Appliance Energy Consumption Website - Home">
+        <img class="brand-icon" src="assets/img/PowerIcon.png" alt="Appliance Energy logo" />
+        <span>Appliance Energy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container">
+      <h2>About This Project</h2>
+      <p class="lead">
+        This site was built for COS30045 Exercise 0.2 to demonstrate a
+        multi-page website using HTML, CSS and JavaScript, with regular
+        commits to a GitHub repository.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Purpose</h3>
+          <p>A small demonstration website exploring appliance energy consumption in the Australian market, built ahead of later D3.js-based data visualisation exercises.</p>
+        </div>
+        <div class="card">
+          <h3>Technologies used</h3>
+          <p>Semantic HTML5, an external CSS stylesheet, and vanilla JavaScript (no frameworks or libraries) for interactivity.</p>
+        </div>
+        <div class="card">
+          <h3>Generative AI use</h3>
+          <p>Generative AI (Claude) was used to help plan the site structure, draft starter HTML/CSS/JS, and review the code. All code was reviewed and understood before submission.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 40px;">Reflection on Generative AI</h2>
+      <p class="lead">
+        Placeholder reflection: replace this paragraph with your own honest
+        account of how (if at all) you used GenAI in this exercise — what you
+        asked for, what you changed, and what you learned by reviewing or
+        rewriting the generated code.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Your Name Here</span>
+      <span class="genai-note">Built with the assistance of Generative AI (Claude) for planning, code drafting and review.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
