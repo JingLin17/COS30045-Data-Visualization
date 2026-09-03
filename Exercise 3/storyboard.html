@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StoryBoard | Appliance Energy Consumption Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Exercise%200.2/assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="../Exercise%200.2/index.html" class="brand" aria-label="Appliance Energy Consumption Website - Home">
+        <img class="brand-icon" src="../Exercise%200.2/assets/img/PowerIcon.png" alt="Appliance Energy logo" />
+        <span>Appliance Energy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../Exercise%200.2/index.html">Home</a></li>
+        <li><a href="../Exercise%200.2/televisions.html">Televisions</a></li>
+        <li><a href="../Exercise%200.2/about.html">About Us</a></li>
+        <li><a href="storyboard.html" aria-current="page" >Story Board</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+  <section class="section container">
+    <img src="../Exercise%200.2/assets/img/storyboard.png"/>
+  <h2>The Data Story: What Really Drives Your TV's Power Bill?</h2>
+  <p class="lead">
+    Thinking about a new TV? Two things quietly decide how much it costs to
+    run each year: how big it is, and what kind of screen it uses.
+  </p>
+
+  <h3>Size is the biggest factor</h3>
+  <p class="lead">
+    Grouping TVs into small (under 43"), medium (44"–65") and large (over 66")
+    shows a clear pattern: average energy consumption drops from about 745
+    kWh/year for large TVs, to 405 kWh/year for medium, to just 155 kWh/year
+    for small. If keeping running costs down matters to you, size is the
+    first thing to check.
+  </p>
+  <figure class="chart-figure">
+    <img src="../Exercise%200.2/assets/img/Bar Chart.png"
+         alt="Bar chart showing average energy consumption for small, medium and large TVs, decreasing with size" />
+    <figcaption>Average energy consumption by TV size category.</figcaption>
+  </figure>
+
+  <h3>But screen technology matters too</h3>
+  <p class="lead">
+    Comparing LCD, LCD LED and OLED panels within each size category reveals
+    a second effect: OLED and LCD LED screens use more energy than plain LCD
+    at every size. The surprise is at the small end — small OLED TVs use
+    nearly double the energy of a similarly-sized LCD or LCD LED (about 232
+    kWh/year vs around 120 kWh/year), despite being the smaller option.
+  </p>
+  <figure class="chart-figure">
+    <img src="../Exercise%200.2/assets/img/Bar Chart 2.png"
+         alt="Grouped bar chart comparing LCD, LCD LED and OLED energy consumption across small, medium and large size categories" />
+    <figcaption>Average energy consumption by screen technology, grouped by size category.</figcaption>
+  </figure>
+
+  <p class="lead">
+    <strong>Takeaway:</strong> if running cost is a priority, start with a
+    smaller screen size — then double-check the panel technology, since a
+    compact OLED can quietly cost more to run than a larger LCD.
+  </p>
+</section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Your Name Here</span>
+      <span class="genai-note">Built with the assistance of Generative AI (Claude) for planning, code drafting and review.</span>
+    </div>
+  </footer>
+
+  <script src="../Exercise%200.2/assets/js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
