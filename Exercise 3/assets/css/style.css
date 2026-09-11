@@ -1,0 +1,448 @@
+/* ==========================================================================
+   Appliance Energy Consumption Website
+   Design tokens derived from the power/plug logo:
+   navy base, electric cyan for "current", amber for "energy/warmth".
+   ========================================================================== */
+
+:root {
+  --color-navy: #0F2038;
+  --color-navy-light: #1B3358;
+  --color-cyan: #17C3B2;
+  --color-amber: #FFB627;
+  --color-bg: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-text: #1F2933;
+  --color-text-muted: #5A6472;
+  --color-border: #E1E6EC;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-card: 0 4px 16px rgba(15, 32, 56, 0.08);
+
+  --nav-height: 72px;
+}
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Skip link (accessibility) ---------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-navy);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 200;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  height: var(--nav-height);
+  background-color: var(--color-navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.site-nav .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.brand:hover {
+  color: var(--color-cyan);
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.brand-icon .bolt {
+  fill: var(--color-amber);
+}
+
+.brand-icon .ring {
+  fill: none;
+  stroke: var(--color-cyan);
+  stroke-width: 4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: inline-block;
+  color: #D7DEE8;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.18s ease, color 0.18s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-navy-light);
+  color: #fff;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-cyan);
+  border-bottom: 2px solid var(--color-cyan);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  color: #fff;
+  padding: 72px 0;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  max-width: 720px;
+}
+
+.hero p {
+  color: #C6CEDA;
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.stat {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  min-width: 160px;
+}
+
+.stat .value {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--color-amber);
+  font-weight: 700;
+}
+
+.stat .label {
+  color: #C6CEDA;
+  font-size: 0.85rem;
+}
+
+/* ---------- Generic sections ---------- */
+.section {
+  padding: 56px 0;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.section .lead {
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* ---------- FAQ Accordion ---------- */
+.faq {
+  max-width: 720px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq-question:hover {
+  background-color: #F0F3F7;
+}
+
+.faq-question .icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+  color: var(--color-cyan);
+}
+
+.faq-item.open .faq-question .icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-answer p {
+  padding: 0 20px 18px;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Calculator (JS extension) ---------- */
+.calculator {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 720px) {
+  .calculator {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-form .field {
+  margin-bottom: 16px;
+}
+
+.calc-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  color: var(--color-navy);
+}
+
+.calc-form input,
+.calc-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background-color: #FBFCFD;
+}
+
+.calc-form input:focus,
+.calc-form select:focus {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 1px;
+}
+
+.field-error {
+  color: #C0392B;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  min-height: 1em;
+}
+
+.calc-btn {
+  background-color: var(--color-navy);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+
+.calc-btn:hover {
+  background-color: var(--color-navy-light);
+}
+
+.calc-results h3 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row .result-label {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.result-row .result-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.calc-empty-state {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--color-navy);
+  color: #B7C0CC;
+  padding: 28px 0;
+  margin-top: 40px;
+  font-size: 0.85rem;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.site-footer .genai-note {
+  color: #8B96A4;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .site-nav .container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+  .site-nav {
+    height: auto;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
