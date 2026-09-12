@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Appliance Energy Consumption Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Appliance Energy Consumption Website - Home">
+        <img class="brand-icon" src="assets/img/PowerIcon.png" alt="Appliance Energy logo" />
+        <span>Appliance Energy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="storyboard.html">Story Board</a></li>
+        <li><a href="Exercise4.1.html" >Exercise4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1>Understanding Appliance Energy Consumption in Australia</h1>
+        <p>
+          Household appliances are one of the largest contributors to Australian
+          electricity bills. This site explores how everyday devices — starting
+          with televisions — draw power, and what that means for your energy
+          costs over time. (Placeholder content for Exercise 0.2.)
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="value">30%</div>
+            <div class="label">of household bills from appliances*</div>
+          </div>
+          <div class="stat">
+            <div class="value">~8</div>
+            <div class="label">major appliances per home*</div>
+          </div>
+          <div class="stat">
+            <div class="value">24/7</div>
+            <div class="label">standby power draw*</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Why appliance energy use matters</h2>
+      <p class="lead">
+        Placeholder overview — this content will be replaced with real,
+        referenced statistics on the Australian appliance energy market in a
+        later exercise.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Rising running costs</h3>
+          <p>Placeholder text about electricity price trends and their effect on appliance running costs.</p>
+        </div>
+        <div class="card">
+          <h3>Star energy ratings</h3>
+          <p>Placeholder text explaining the Australian energy rating label and how it guides purchases.</p>
+        </div>
+        <div class="card">
+          <h3>Standby power</h3>
+          <p>Placeholder text about "vampire" power draw from appliances left on standby.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Frequently Asked Questions</h2>
+      <p class="lead">Click a question to reveal the answer.</p>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is appliance energy consumption measured?</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Placeholder answer: energy use is typically measured in kilowatt-hours (kWh), calculated from an appliance's wattage and hours of use.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Which appliances use the most power?</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Placeholder answer: heating, cooling and hot water systems are usually the largest contributors, followed by entertainment devices like televisions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I estimate my own appliance's cost?</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Placeholder answer: yes — see the interactive Appliance Energy Calculator on the Televisions page.</p>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+      <div class="responsive-svg-container"></div>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Your Name Here</span>
+      <span class="genai-note">Built with the assistance of Generative AI (Claude) for planning, code drafting and review.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

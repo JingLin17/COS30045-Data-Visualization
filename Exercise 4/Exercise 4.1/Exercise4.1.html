@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 4 | Appliance Energy Consumption Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Appliance Energy Consumption Website - Home">
+        <img class="brand-icon" src="assets/img/PowerIcon.png" alt="Appliance Energy logo" />
+        <span>Appliance Energy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="storyboard.html">Story Board</a></li>
+        <li><a href="Exercise4.1.html" aria-current="page">Exercise4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container">
+        <h2>Create a picture with SVG shapes</h2>
+        <div class="house-gallery">
+        <div>
+        <h2>Before</h2>
+        <svg viewBox="0 0 400 400" width="400" height="400">
+        <rect x="0" y="0" width="400" height="400" fill="skyblue" />
+        <rect x="0" y="300" width="400" height="100" fill="green" />
+
+        <!-- Sun -->
+        <circle cx="350" cy="50" r="30" fill="yellow" />
+
+        <!-- Tree (trunk resting on ground at y=300) -->
+        <rect x="45" y="240" width="15" height="60" fill="saddlebrown" />
+        <circle cx="52" cy="225" r="30" fill="forestgreen" />
+
+        <!-- House -->
+        <rect x="150" y="180" width="160" height="120" fill="peru" />
+        <polygon points="130,180 330,180 230,100" fill="brown" />
+        <rect x="210" y="240" width="40" height="60" fill="saddlebrown" />
+        <rect x="170" y="200" width="30" height="30" fill="lightblue" stroke="black" />
+        <rect x="260" y="200" width="30" height="30" fill="lightblue" stroke="black" />
+
+        <!-- Road -->
+        <rect x="0" y="340" width="400" height="60" fill="dimgray" />
+        <line x1="0" y1="370" x2="400" y2="370" stroke="white" stroke-width="4" stroke-dasharray="20,15" />
+
+        <!-- Car (on road, driving right) -->
+        <rect x="90" y="350" width="70" height="25" rx="5" fill="crimson" />
+        <rect x="105" y="335" width="35" height="20" rx="4" fill="crimson" />
+        <circle cx="105" cy="378" r="8" fill="black" />
+        <circle cx="145" cy="378" r="8" fill="black" />
+        </svg>
+        </div>
+
+        <div>
+        <h2>After</h2>
+        <svg viewBox="0 0 400 400" width="400" height="400">
+        <rect x="0" y="0" width="400" height="400" fill="skyblue" />
+        <rect x="0" y="300" width="400" height="100" fill="green" />
+
+        <!-- Sun (left side) -->
+        <circle cx="50" cy="50" r="30" fill="yellow" />
+
+        <!-- House -->
+        <rect x="90" y="180" width="160" height="120" fill="peru" />
+        <polygon points="70,180 270,180 170,100" fill="brown" />
+        <rect x="150" y="240" width="40" height="60" fill="saddlebrown" />
+        <rect x="110" y="200" width="30" height="30" fill="lightblue" stroke="black" />
+        <rect x="200" y="200" width="30" height="30" fill="lightblue" stroke="black" />
+
+        <!-- Tree (right side, trunk resting on ground at y=300) -->
+        <rect x="340" y="240" width="15" height="60" fill="saddlebrown" />
+        <circle cx="347" cy="225" r="30" fill="forestgreen" />
+
+        <!-- Road -->
+        <rect x="0" y="340" width="400" height="60" fill="dimgray" />
+        <line x1="0" y1="370" x2="400" y2="370" stroke="white" stroke-width="4" stroke-dasharray="20,15" />
+
+        <!-- Car (on road, driving left, on the right side) -->
+        <rect x="260" y="350" width="70" height="25" rx="5" fill="royalblue" />
+        <rect x="275" y="335" width="35" height="20" rx="4" fill="royalblue" />
+        <circle cx="275" cy="378" r="8" fill="black" />
+        <circle cx="315" cy="378" r="8" fill="black" />
+        </svg>
+        </div>
+        </div>
+
+    </div>
+      <h2>Become familiar with the SVG coordinate system</h2>
+      <div class="house-gallery">
+        <div>
+        <h2>Before</h2>
+        <img src="assets/img/svg1_ANNOTATED.png" alt="Annotated coordinates for house scene 1" width="400" />
+        </div>
+
+        <div>
+        <h2>After</h2>
+        <img src="assets/img/svg2_ANNOTATED.png" alt="Annotated coordinates for house scene 2" width="400" />
+        </div>
+      </div>
+
+    <table class="comparison-table">
+    <thead>
+        <tr><th>Feature</th><th>Before</th><th>After</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Sun position</td><td>Right (cx=350)</td><td>Left (cx=50)</td></tr>
+        <tr><td>Tree position</td><td>Left of house</td><td>Right of house</td></tr>
+        <tr><td>Car colour</td><td>Crimson (red)</td><td>Royal blue</td></tr>
+        <tr><td>Car direction</td><td>Facing right</td><td>Facing left</td></tr>
+    </tbody>
+    </table>
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Your Name Here</span>
+      <span class="genai-note">Built with the assistance of Generative AI (Claude) for planning, code drafting and review.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
